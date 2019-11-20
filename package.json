@@ -4,8 +4,15 @@
   "description": "Pet project - e-commerce store using nodejs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "dh9325",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
