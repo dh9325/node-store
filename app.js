@@ -19,7 +19,7 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res.status(404).render(path.join(__dirname, 'views', '404.ejs'), {pageTitle: 'Not Found'});
+  res.status(404).render('404', {pageTitle: 'Not Found'});
 });
 
 app.listen(3000);
