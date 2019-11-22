@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/add-product', (req, res, next) => {
-  res.render('add-product', {pageTitle: 'Add Product'});
-});
+const productsController = require('../controllers/products');
 
-router.post('/add-product', (req, res, next) => {
-  res.redirect('/');
-});
+router.get('/add-product', productsController.getAddProduct);
+
+router.post('/add-product', productsController.postAddProduct);
 
 module.exports = router;
